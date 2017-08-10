@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Quickstart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../themify-icons/themify-icons.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="top">
+			<h1><a href="">Flexbox Intro</a></h1>
+		</header>
+		<nav class="flex-nav">
+			<a href="#" class="toggleNav"><i class="ti ti-menu"></i> Menu</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="slider.html">Slider</a></li>
+				<li><a href="pricing.html">Pricing</a></li>
+				<li><a href="">Item 04</a></li>
+				<li><a href="">Item 05</a></li>
+				<li><a href="">Item 06</a></li>
+				<li class="social"><a href="https://"><i class="ti ti-twitter"></i></a></li>
+				<li class="social"><a href="https://"><i class="ti ti-instagram"></i></a></li>
+				<li class="social"><a href="https://"><i class="ti ti-github"></i></a></li>
+				<li class="social"><a href="https://"><i class="ti ti-facebook"></i></a></li>
+			</ul>
+		</nav>
+
+		<!-- About -->
+		<section class="hero">
+			<img src="images/33922601146_fb9867b205_k.jpg">
+		</section>
+
+		<!-- Just anything -->
+		<section class="details">
+			<p>A simple way to get out of here is to !!! ;)</p>
+			<p>Sign up now to grab lots of packages, nah was just kidding. ;)</p>
+		</section>
+
+		<!-- Newsletter -->
+		<section class="signup">
+			<form action="" class="signup">
+				<input type="text" placeholder="Your Name" name="">				
+				<input type="email" placeholder="Your Email" name="">				
+				<input type="submit" value="Sign Up">	
+			</form>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<p>&copy; Weezykon</p>
+		</footer>
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.toggleNav').on('click', function(){
+				$('.flex-nav ul').toggleClass('open');
+			});
+		});
+	</script>
+</body>
+</html>

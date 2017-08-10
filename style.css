@@ -1,0 +1,49 @@
+/* Box Sizing border box */
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	margin: 20px;
+	background:#eee; 
+}
+
+h3,h2,h3{
+	text-align:center;
+	font-size: 25px;
+	color: #400040;
+}
+
+h4{
+	font-size: 20px;
+	color: #400040;
+}
+
+.wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.nav {
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.box{
+	flex: 1 1 30%;
+}
+
+img{
+	width: 400px;
+}

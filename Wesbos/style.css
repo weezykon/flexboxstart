@@ -1,0 +1,223 @@
+/* Box Sizing border box */
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	margin: 0;
+	background-image: linear-gradient(250deg, #2376ae 0%, #c16ecf 100%); 
+}
+
+a{
+	color: white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background: rgba(0,0,0,0.2);
+	padding: 20px 5px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+a:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+img{
+	width: 100%;
+}
+
+.toggleNav{
+	display: none;
+}
+
+input{
+	padding: 10px;
+	border: 0;
+}
+
+section,footer{
+	text-align:center;
+	background: rgba(0,0,0,0.2);
+	padding: 20px;
+	margin: 20px 0;
+	color: white;
+	font-weight: 100;
+}
+
+/* Pricing Css */
+.plan ul li{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 10px;
+}
+
+.plan ul li:last-child {
+	border-bottom: 0;
+}
+
+.plan a {
+	text-decoration: none;
+	background: #feff00;
+	padding: 10px;
+	color: black;
+	border-radius: 4px;
+}
+
+.price {
+	font-size: 50px;
+	font-family: serif;
+	margin: 10px 0;
+}
+
+/* Flexbox starts here */
+/* Index Css */
+.flex-nav ul{
+	border: 1px solid black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.flex-nav li{
+	flex: 3;
+}
+
+.flex-nav .social{
+	flex: 1;
+}
+
+/* Slider Css */
+.slider-nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.slider-nav li{
+	flex:1;
+	display: flex;
+}
+
+.slider-nav .arrow{
+	font-size: 30px;
+}
+
+.slider-nav a {
+	display: block;
+	width: 100%;
+}
+
+/* Pricing Grid */
+.pricing-grid{
+	max-width: 750px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.plan{
+	background: rgba(255, 255, 255, 0.2);
+	margin: 20px;
+	padding: 20px;
+	border-radius: 4px;
+	text-align: center;
+
+	flex: 1;
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.plan ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.plan > * {
+	flex: 1 1 100%;
+}
+
+.plan .cta{
+	align-self: flex-end;
+}
+/* Pricing Css */
+@media all and (max-width: 1000px){
+	.flex-nav ul{
+		flex-wrap: wrap;
+	}
+
+	.flex-nav li{
+		flex:1 1 50%;
+	}
+
+	.flex-nav .social{
+		flex:1 1 25%;
+	}
+}
+
+@media all and (max-width: 500px){
+	.flex-nav li{
+		flex:100%;
+	}
+
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.toggleNav{
+		display: block;
+	}
+
+	.wrapper > * {
+		order:9999;
+	}
+
+	.flex-nav{
+		order:1;
+	}
+
+	.flex-nav ul {
+		display: none;
+	}
+
+	.flex-nav ul.open{
+		display: flex;
+		position: relative;
+		z-index: 2;
+	}
+
+	.signup{
+		display: flex;
+		flex: wrap;
+		flex-direction: column;
+	}
+
+	.details{
+		order:3;
+	}
+
+	.top{
+		order:2;
+	}
+
+	.signup{
+		order: 4;
+	}
+}
